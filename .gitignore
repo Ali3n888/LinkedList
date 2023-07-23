@@ -1,0 +1,4 @@
+# exclude following directories:
+
+/bin/*
+/build/*

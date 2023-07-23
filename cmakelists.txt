@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(List VERSION 0.1.0)
+
+include_directories(${CMAKE_SOURCE_DIR}/src)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+
+add_executable(List
+src/linkedlist.cpp
+src/node.cpp
+src/main.cpp)
+
+
+install(
+    TARGETS List
+    DESTINATION /bin
+)
